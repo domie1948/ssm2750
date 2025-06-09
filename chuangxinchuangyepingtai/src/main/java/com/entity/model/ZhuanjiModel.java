@@ -1,0 +1,210 @@
+package com.entity.model;
+
+import com.entity.ZhuanjiEntity;
+
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
+import java.io.Serializable;
+
+
+/**
+ * 专家
+ * 接收传参的实体类
+ *（实际开发中配合移动端接口开发手动去掉些没用的字段， 后端一般用entity就够用了）
+ * 取自ModelAndView 的model名称
+ * @author 
+ * @email
+ * @date 2021-04-06
+ */
+public class ZhuanjiModel implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+
+
+
+    /**
+     * 主键
+     */
+    private Integer id;
+
+
+    /**
+     * 账户
+     */
+    private String username;
+
+
+    /**
+     * 密码
+     */
+    private String password;
+
+
+    /**
+     * 专家姓名
+     */
+    private String zhuanjiName;
+
+
+    /**
+     * 性别
+     */
+    private Integer sexTypes;
+
+
+    /**
+     * 身份证号
+     */
+    private String zhuanjiIdNumber;
+
+
+    /**
+     * 手机号
+     */
+    private String zhuanjiPhone;
+
+
+    /**
+     * 照片
+     */
+    private String zhuanjiPhoto;
+
+
+    /**
+     * 创建时间
+     */
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat
+    private Date createTime;
+
+
+    /**
+	 * 获取：主键
+	 */
+    public Integer getId() {
+        return id;
+    }
+
+
+    /**
+	 * 设置：主键
+	 */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    /**
+	 * 获取：账户
+	 */
+    public String getUsername() {
+        return username;
+    }
+
+
+    /**
+	 * 设置：账户
+	 */
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    /**
+	 * 获取：密码
+	 */
+    public String getPassword() {
+        return password;
+    }
+
+
+    /**
+	 * 设置：密码
+	 */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    /**
+	 * 获取：专家姓名
+	 */
+    public String getZhuanjiName() {
+        return zhuanjiName;
+    }
+
+
+    /**
+	 * 设置：专家姓名
+	 */
+    public void setZhuanjiName(String zhuanjiName) {
+        this.zhuanjiName = zhuanjiName;
+    }
+    /**
+	 * 获取：性别
+	 */
+    public Integer getSexTypes() {
+        return sexTypes;
+    }
+
+
+    /**
+	 * 设置：性别
+	 */
+    public void setSexTypes(Integer sexTypes) {
+        this.sexTypes = sexTypes;
+    }
+    /**
+	 * 获取：身份证号
+	 */
+    public String getZhuanjiIdNumber() {
+        return zhuanjiIdNumber;
+    }
+
+
+    /**
+	 * 设置：身份证号
+	 */
+    public void setZhuanjiIdNumber(String zhuanjiIdNumber) {
+        this.zhuanjiIdNumber = zhuanjiIdNumber;
+    }
+    /**
+	 * 获取：手机号
+	 */
+    public String getZhuanjiPhone() {
+        return zhuanjiPhone;
+    }
+
+
+    /**
+	 * 设置：手机号
+	 */
+    public void setZhuanjiPhone(String zhuanjiPhone) {
+        this.zhuanjiPhone = zhuanjiPhone;
+    }
+    /**
+	 * 获取：照片
+	 */
+    public String getZhuanjiPhoto() {
+        return zhuanjiPhoto;
+    }
+
+
+    /**
+	 * 设置：照片
+	 */
+    public void setZhuanjiPhoto(String zhuanjiPhoto) {
+        this.zhuanjiPhoto = zhuanjiPhoto;
+    }
+    /**
+	 * 获取：创建时间
+	 */
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+
+    /**
+	 * 设置：创建时间
+	 */
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    }
